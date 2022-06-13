@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Voltar"></ion-back-button>
+    </ion-buttons>
+
+    
+    <ion-title>Usuário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-input [disabled]="!editModeSave ? 'disabled': null" type="text" [(ngModel)]="user.name" placeholder="Nome"></ion-input>
+    </ion-item>
+      <ion-item>
+        <ion-label>Sexo</ion-label>
+        <ion-select [disabled]="!editModeSave ? 'disabled': null" type="text" [(ngModel)]="user.picture" placeholder="Selecione">
+          <ion-select-option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi7cihNF4PheiP942EebPnrqt9APLgo_hVy0D3tmTJDBZ9mXLmnA&s">Feminino</ion-select-option>
+          <ion-select-option value="data:image/png;base64,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">Masculino</ion-select-option>
+          <ion-select-option value="https://pngimage.net/wp-content/uploads/2018/06/point-d-interrogation-png-1.png">Não Informado</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-toolbar>
+        <ion-button [disabled]="!editModeSave ? 'disabled': null" color="success" (click)="saveUser()" expand="block">
+          Salvar
+        </ion-button>
+      </ion-toolbar>
+  </ion-list>
+  <img  class="thumbnail-image" src="https://http2.mlstatic.com/10-chaveiros-rfid-tag-125khz-controle-acesso-D_NQ_NP_981022-MLB28146776787_092018-F.jpg"
+      onerror="this.src='./app/assets/images/placeholder.jpg';"  alt="..." />
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-button [disabled]="!editModeGetUID ? 'disabled': null" color="secondary" (click)="getTagUID()" expand="block">
+      Vincular TagUID
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

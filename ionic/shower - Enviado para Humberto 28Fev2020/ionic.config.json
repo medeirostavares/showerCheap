@@ -1,0 +1,7 @@
+{
+  "name": "shower",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
